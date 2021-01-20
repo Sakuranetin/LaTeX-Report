@@ -1,0 +1,80 @@
+
+{
+
+    "editor.mouseWheelZoom": true,
+    	// 按住 `Ctrl` 键并滚动鼠标滚轮时对编辑器字体大小进行缩放。
+
+		"latex-workshop.latex.tools": [
+			{
+				"name": "xelatex",
+				"command": "xelatex",
+				"args": [
+					"-synctex=1",
+					"-interaction=nonstopmode",
+					"-file-line-error",
+					"%DOCFILE%"
+				]
+			},
+			{
+				"name": "pdflatex",
+				"command": "pdflatex",
+				"args": [
+					"-synctex=1",
+					"-interaction=nonstopmode",
+					"-file-line-error",
+					"%DOCFILE%"
+				]
+			},
+			{
+				"name": "bibtex",
+				"command": "bibtex",
+				"args": [
+					"%DOCFILE%"
+				]
+			}
+		],
+		
+		"latex-workshop.latex.recipes": [
+			{
+				"name": "xelatex",
+				"tools": [
+					"xelatex"
+				],
+			},
+			{
+				"name": "pdflatex",
+				"tools": [
+					"pdflatex"
+				]
+			},
+			{
+				"name": "xe->bib->xe->xe",
+				"tools": [
+					"xelatex",
+					"bibtex",
+					"xelatex",
+					"xelatex"
+				]
+			},
+			{
+				"name": "pdf->bib->pdf->pdf",
+				"tools": [
+					"pdflatex",
+					"bibtex",
+					"pdflatex",
+					"pdflatex"
+				]
+			}
+		],
+
+
+    //如果编译出错，插件会弹出两个很烦人的气泡，不喜欢的话可以在设置中添加以下代码
+"latex-workshop.message.error.show": false,
+"latex-workshop.message.warning.show": false,
+//LaTeX Workshop 默认保存的时候自动编译，如果不喜欢这个设置，可以添加以下代码进入设置区：
+"latex-workshop.latex.autoBuild.run": "never",
+"workbench.colorTheme": "Eva Dark",
+"latex-workshop.view.pdf.viewer": "tab",
+
+
+}
