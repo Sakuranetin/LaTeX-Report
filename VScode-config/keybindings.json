@@ -1,0 +1,28 @@
+// 将键绑定放在此文件中以覆盖默认值
+[
+    {
+        "key": "alt+s",
+        "command": "latex-workshop.synctex",
+        "when": "editorTextFocus && !isMac"
+    },
+    {
+        "key": "alt+w",
+        "command": "latex-workshop.recipes",
+        "when": "editorTextFocus && !isMac"
+    },
+    {
+        "key": "alt+e",
+        "command": "latex-workshop.kill",
+        "when": "editorTextFocus && !isMac"
+    },
+    {
+        "key": "alt+q",
+        "command": "latex-workshop.build",
+        "when": "editorTextFocus && !isMac"
+    },
+    {
+        "key": "alt+a",
+        "command": "latex-workshop.view"
+    }
+
+]
